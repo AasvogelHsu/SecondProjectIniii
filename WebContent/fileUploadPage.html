@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script
+			src="https://code.jquery.com/jquery-3.4.0.min.js"
+			integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			crossorigin="anonymous">
+	</script>
+ 		
+	</head>
+	
+	<body>
+		<form action="doUpload" method="post" enctype="multipart/form-data">
+			<input type="file" name="upload">
+			<br>
+			<input type="submit" value="upload">
+		</form>
+		<span></span>
+		
+		<script>
+                $( "form" ).submit(function( event ) {
+                     if ( $( "input:first" ).val() == "" ) {
+                      $( "span" ).text( "請選擇上傳檔案!" ).show().fadeOut( 1000 );
+                     return false;
+                 	}else{
+                 		return true;
+                 	}
+     			});
+        </script>
+
+	</body>
+</html>
