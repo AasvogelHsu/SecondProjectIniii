@@ -1,28 +1,46 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		
 		<script
 			src="https://code.jquery.com/jquery-3.4.0.min.js"
 			integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-			crossorigin="anonymous">
-	</script>
- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- 	
+			crossorigin="anonymous"></script>
+ 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 		<script >
+ 			function back(){
+ 				location.href="FileList.jsp";
+ 			}
+ 		</script>
 	</head>
 	
-	<body>
-		<div>
-			<form action="doUpload" method="post" enctype="multipart/form-data">
-				<input type="file" name="upload">
-				<br>
-				<input type="submit" value="upload">
-			</form>
-			<span></span>
+	<body style="background-image:url(Black_hole.jpg);background-repeat:no-repeat;background-size:cover">
+		
+		<div class="container" style="margin-top: 250px;">
+			<div class="row">
+				<div class="col" style="opacity: 0"></div>
+				
+				<div class="col" style="background-color: white;opacity: 0.8;border-radius: 30px;padding-top: 10px ">
+					<form  action="doUpload" method="post" enctype="multipart/form-data">
+						<input type="file" name="upload" style="position: relative;left: 90px">
+						<br>
+						<span style="position: relative;left: 100px"></span>
+						<br>
+						<input type="submit" value="upload">
+						<button style="position: relative;left: 170px" onclick="back()">BACK TO LIST</button>
+						
+					</form>
+					
+				</div>
+				
+				<div class="col" style="opacity: 0"></div>
+			</div>	
 		</div>
+		
 		<script>
                 $( "form" ).submit(function( event ) {
                      if ( $( "input:first" ).val() == "" ) {
-                      $( "span" ).text( "請選擇上傳檔案!" ).show().fadeOut( 1000 );
+                     // $( "span" ).text( "請選擇上傳檔案!" ).show().fadeOut( 1000 );
                      return false;
                  	}else{
                  		return true;
