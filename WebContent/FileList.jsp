@@ -17,27 +17,42 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>FileList</title>
 </head>
-<body>
-	<h1>File   List</h1>
+<body style="background-image:url(filelistbg.jpg);background-repeat:no-repeat;background-size:cover">
+	<h1 style="text-align:center">File   List</h1>
 	<hr>
-	<h3><a href="fileUploadPage.html">Upload Somethings</a></h3>
-	<table border="1" width="100%">
-		<tr>
-			<th>File Name</th>
-			<th>File Size</th>
-			<th>Upload Date</th>
-			<th>For Download</th>
-		</tr>
-		<c:forEach items="${result.rows }" var="row">
-			<tr>
-				<td>${row.filename }</td>
-				<td>${row.filesize } Byte</td>
-				<td>${row.uploaddate }</td>
-				<td><a download href="${row.fordown }">DOWNLOAD</a></td>
-			</tr>
-		</c:forEach>
-	</table>
+		<h5 style="text-align: right"><a href="fileUploadPage.html">Upload Something</a></h5>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			
+			<div class="col-10" >
+				<table class="table table-dark" style="opacity:0.9">
+					<tr style="font-weight: bolder;">
+						<th>File Name</th>
+						<th>File Size</th>
+						<th>Upload Date</th>
+						<th>For Download</th>
+					</tr>
+					<c:forEach items="${result.rows }" var="row">
+						<tr style="font-weight: bold;">
+							<td>${row.filename }</td>
+							<td>${row.filesize } Byte</td>
+							<td>${row.uploaddate }</td>
+							<td><a download href="${row.fordown }">DOWNLOAD</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

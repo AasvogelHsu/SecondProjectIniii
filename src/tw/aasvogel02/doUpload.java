@@ -86,6 +86,8 @@ public class doUpload extends HttpServlet {
 			
 			conn.close();
 			
+			
+			
 			response.sendRedirect("FileList.jsp");
 			
 		} catch (Exception e) {
