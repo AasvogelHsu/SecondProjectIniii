@@ -4,4 +4,8 @@
     <param-name>storagePath</param-name>
     <param-value>C:\JAVA\java-ee\SecondProjectOfiii\WebContent\storagespace</param-value>
   </context-param>
+  <context-param>
+    <param-name>outsideStoragePath</param-name>
+    <param-value>D:\Dstorage</param-value>
+  </context-param>
 </web-app>

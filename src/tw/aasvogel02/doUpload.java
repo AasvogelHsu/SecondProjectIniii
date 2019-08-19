@@ -32,7 +32,7 @@ public class doUpload extends HttpServlet {
 		Part upload = request.getPart("upload");
 		//↓箭頭之間的很重要  要記得
 		ServletContext context = getServletContext();
-		String storagePath = context.getInitParameter("storagePath");
+		String storagePath = context.getInitParameter("outsideStoragePath");
 		System.out.println(storagePath);//儲存路徑
 		//↑箭頭之間的很重要  要記得
 		
@@ -43,10 +43,10 @@ public class doUpload extends HttpServlet {
 		String filesize = Long.toString(size);//檔案大小
 		System.out.println(filesize);
 		
-		String[] addr1 = storagePath.split("\\\\");
 		
-		String folder = addr1[5]+"\\"+filename;
-		System.out.println(folder);//下載用路徑
+		String downUrl = "/downUrl/";
+		String folder = downUrl+filename;
+		System.out.println(folder);
 		
 		Date date = new Date();
 		DateFormat shortFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT,DateFormat.SHORT);	
