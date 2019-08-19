@@ -44,9 +44,9 @@ public class doUpload extends HttpServlet {
 		System.out.println(filesize);
 		
 		
-		String downUrl = "/downUrl/";
+		String downUrl = "/downUrl/";//
 		String folder = downUrl+filename;
-		System.out.println(folder);
+		System.out.println(folder);//下載路徑
 		
 		Date date = new Date();
 		DateFormat shortFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT,DateFormat.SHORT);	
@@ -85,8 +85,6 @@ public class doUpload extends HttpServlet {
 			System.out.println("OK");
 			
 			conn.close();
-			
-			
 			
 			response.sendRedirect("FileList.jsp");
 			

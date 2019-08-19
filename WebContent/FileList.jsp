@@ -30,8 +30,8 @@
 		<div class="row">
 			<div class="col"></div>
 			
-			<div class="col-10" >
-				<table class="table table-dark" style="opacity:0.9">
+			<div class="col-10">
+				<table class="table table-dark" style="opacity:0.9;">
 					<tr style="font-weight: bolder;">
 						<th>File Name</th>
 						<th>File Size</th>
