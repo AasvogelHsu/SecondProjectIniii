@@ -67,8 +67,8 @@ public class doUpload extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");//PS:載入MYSQL驅動程式
 			
 			Properties prop = new Properties();
-			prop.put("user", "root");
-			prop.put("password", "Blackhurricane02");
+			prop.put("user", "user");
+			prop.put("password", "password");
 			prop.put("serverTimezone", "Asia/Taipei");
 			Connection conn =DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/forjavaee", prop);
