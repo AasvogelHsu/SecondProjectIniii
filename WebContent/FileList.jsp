@@ -7,7 +7,7 @@
 		driver="com.mysql.cj.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/forjavaee?serverTimezone=Asia/Taipei"
 		user="root"
-		password="Blackhurricane02"
+		password="yourpassword"
 />
 <sql:query var="result">
 	SELECT * FROM secondproject
